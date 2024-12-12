@@ -123,12 +123,12 @@
     };
     fromSnipmate = [
       {
-        paths = ./snippets/snipmate;
+        paths = "~/snippets/snipmate";
       }
     ];
     fromLua = [
       {
-        paths = ./snippets/lua;
+        paths = "~/snippets/lua";
       }
     ];
   };

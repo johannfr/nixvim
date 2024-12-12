@@ -11,12 +11,12 @@
     enable = true;
     autoEnableSources = true;
     settings = {
-      snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+      snippet.expand = "luasnip";
       sources = [
+        { name = "luasnip"; }
         { name = "nvim_lsp"; }
         { name = "nvim_lsp_document_symbol"; }
         { name = "nvim_lsp_signature_help"; }
-        { name = "luasnip"; }
         { name = "path"; }
       ]; # sources
 
@@ -123,12 +123,12 @@
     };
     fromSnipmate = [
       {
-        paths = ./snippets/c.snippets;
-        include = [ "c" ];
+        paths = ./snippets/snipmate;
       }
+    ];
+    fromLua = [
       {
-        paths = ./snippets/cpp.snippets;
-        include = [ "cpp" ];
+        paths = ./snippets/lua;
       }
     ];
   };

@@ -16,13 +16,28 @@
         };
 
         lspBuf = {
-          "gi" = "implementation";
-          "gD" = "references";
-          "gd" = "definition";
-          "gt" = "type_definition";
+          "<leader>ci" = {
+            action = "implementation";
+            desc = "Implementation";
+          };
+          "<leader>cD" = {
+            action = "references";
+            desc = "References";
+          };
+          "<leader>cd" = {
+            action = "definition";
+            desc = "Definition";
+          };
+          "<leader>ct" = {
+            action = "type_definition";
+            desc = "Type definition";
+          };
           "K" = "hover";
           "<leader>ca" = "code_action";
-          "<leader>rn" = "rename";
+          "<leader>cr" = {
+            action = "rename";
+            desc = "Rename";
+          };
         };
       };
   };

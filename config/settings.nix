@@ -15,7 +15,7 @@ globals.mapleader = ",";
     # UI options
     cursorline = true;
     number = true;
-    colorcolumn = "80";
+    colorcolumn = "88";
     completeopt = "menu,menuone,noselect";
 
     # Search

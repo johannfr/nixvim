@@ -1,5 +1,11 @@
 { pkgs, ... }:
 {
+
+  plugins.aerial = {
+    enable = true;
+    settings.backends = [ "lsp" "treesitter" ];
+  };
+
   plugins.lsp = {
     enable = true;
     servers = {

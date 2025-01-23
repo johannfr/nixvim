@@ -3,7 +3,14 @@
 
   plugins.aerial = {
     enable = true;
-    settings.backends = [ "lsp" "treesitter" ];
+    settings = {
+      backends = [ "lsp" "treesitter" ];
+      layout = {
+        max_width = 0.5;
+        resize_to_content = true;
+      };
+    };
+
   };
 
   plugins.lsp = {

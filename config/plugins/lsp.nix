@@ -8,6 +8,7 @@
       layout = {
         max_width = 0.5;
         resize_to_content = true;
+        default_direction = "prefer_right";
       };
     };
 

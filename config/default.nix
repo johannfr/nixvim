@@ -18,6 +18,7 @@
     # Python tools
     black
     isort
+    libgit2
   ];
 
 }

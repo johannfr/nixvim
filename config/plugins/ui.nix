@@ -53,6 +53,9 @@
     rainbow-delimiters.enable = true;
     gitsigns.enable = true;
     gitmessenger.enable = true;
+    fugit2 = {
+      enable = true;
+    };
 
     fzf-lua = {
       enable = true;

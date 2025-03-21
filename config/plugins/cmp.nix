@@ -24,8 +24,8 @@
         documentation.maxHeight = "math.floor(40 * (40 / vim.o.lines))";
         completion = {
           colOffset = -3;
-	  sidePadding = 0;
-	}; # completion
+	        sidePadding = 0;
+	        }; # completion
       }; # window
 
       mapping = {
@@ -115,6 +115,39 @@
 
     }; # settings
   }; # plugins.cmp
+
+  plugins.codecompanion = {
+    enable = true;
+    settings = {
+      opts = {
+        send_code = true;
+      };
+      adapters = {
+        gemini = { __raw = ''
+          function()
+            return require("codecompanion.adapters").extend("gemini", {
+              env = {
+                api_key = "AIzaSyANcMWSnjcR9iegF_W_IGKJHHY3Co045yk",
+              },
+            })
+          end
+        '';
+        };
+      };
+      strategies = {
+        agent = {
+          adapter = "gemini";
+        };
+        chat = {
+          adapter = "gemini";
+        };
+        inline = {
+          adapter = "gemini";
+        };
+      };
+    };
+  };
+
   plugins.luasnip = {
     enable = true;
     settings = {

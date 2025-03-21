@@ -1,10 +1,11 @@
 {
 config = {
-globals.mapleader = ",";
 
+  globals.mapleader = ",";
   colorschemes.gruvbox.enable = true;
   opts = {
 
+    clipboard = "unnamedplus";
     # Indentation
     tabstop = 2;
     softtabstop = 2;

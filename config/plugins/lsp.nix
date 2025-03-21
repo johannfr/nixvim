@@ -19,6 +19,21 @@
     servers = {
       clangd.enable = true;
       pylsp.enable = true;
+      ruff.enable = true;
+      # pylyzer.enable = true;
+      # basedpyright = {
+      #   enable = true;
+      #   settings = {
+      #       useLibraryCodeForTypes = false;
+      #       reportMissingTypeStubs = false;
+      #   };
+      # };
+      # pyright = {
+      #   enable = true;
+      #   settings = {
+      #     pyright.disableOrganizeImports = true;
+      #   };
+      # };
     };
     keymaps = {
         silent = true;

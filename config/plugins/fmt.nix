@@ -5,7 +5,7 @@
       formatters_by_ft = {
         python = {
           __unkeyed-1 = "isort";
-          __unkeyed-2 = "black";
+          __unkeyed-2 = "ruff_format";
           timeout_ms = 10000;
           stop_after_first = false;
         };

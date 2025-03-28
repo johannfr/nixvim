@@ -19,7 +19,7 @@
       };
       formatters = {
         dockerastyle = {
-          command = "/home/jof/bin/dockerastyle.sh";
+          command = "/home/jof/vinna/docker/isds/dockerastyle.sh";
         };
       };
     };

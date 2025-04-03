@@ -18,5 +18,17 @@
       key = "<leader>co";
       options.desc = "Toggle Outline";
     }
+    {
+      mode = "v";
+      action = "<gv";
+      key = "<";
+      options.desc = "De-indent";
+    }
+    {
+      mode = "v";
+      action = ">gv";
+      key = ">";
+      options.desc = "Indent";
+    }
   ];
 }

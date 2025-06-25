@@ -8,7 +8,7 @@
     ./plugins/lsp.nix
     ./plugins/cmp.nix
     ./plugins/fmt.nix
-
+    ./plugins/other.nix
   ];
 
   extraPackages = with pkgs; [

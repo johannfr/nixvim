@@ -43,9 +43,7 @@
             "<Tab>" = ''
               cmp.mapping(
                 function(fallback)
-                  if cmp.visible() then
-                    cmp.select_next_item()
-                  elseif require("luasnip").expand_or_locally_jumpable() then
+                  if require("luasnip").expand_or_locally_jumpable() then
                     require("luasnip").expand_or_jump()
                   elseif has_words_before() then
                     cmp.complete()

@@ -2,7 +2,7 @@
 config = {
 
   globals.mapleader = ",";
-  colorschemes.gruvbox.enable = true;
+  colorschemes.gruvbox-material.enable = true;
   opts = {
 
     clipboard = "unnamedplus";

@@ -7,12 +7,17 @@
     end
   '';
 
+  plugins.copilot-cmp = {
+    enable = true;
+  };
+
   plugins.cmp = {
     enable = true;
     autoEnableSources = true;
     settings = {
       snippet.expand = "luasnip";
       sources = [
+        { name = "copilot"; }
         { name = "luasnip"; }
         { name = "nvim_lsp"; }
         { name = "nvim_lsp_document_symbol"; }
@@ -130,9 +135,5 @@
         paths = "~/snippets/lua";
       }
     ];
-  };
-
-  plugins.copilot-cmp = {
-    enable = true;
   };
 }

@@ -1,4 +1,8 @@
 {
+  plugins.visual-multi = {
+    enable = true;
+  };
+
   plugins.diffview = {
     enable = true;
   };

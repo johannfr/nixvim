@@ -30,5 +30,23 @@
       key = ">";
       options.desc = "Indent";
     }
+    {
+      mode = "n";
+      action = "<Esc>";
+      key = "<F1>";
+      options.desc = "Map F1 to Esc";
+    }
+    {
+      mode = "i";
+      action = "<Esc>";
+      key = "<F1>";
+      options.desc = "Map F1 to Esc";
+    }
+    {
+      mode = "v";
+      action = "<Esc>";
+      key = "<F1>";
+      options.desc = "Map F1 to Esc";
+    }
   ];
 }

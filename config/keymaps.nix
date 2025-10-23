@@ -19,6 +19,14 @@
       options.desc = "Toggle Outline";
     }
     {
+      mode = "i";
+      action = "<C-o>o<C-u>";
+      key = "<C-Enter>";
+      options.desc = "Insert new line below";
+      options.noremap = true;
+      options.silent = true;
+    }
+    {
       mode = "v";
       action = "<gv";
       key = "<";

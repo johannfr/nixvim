@@ -1,4 +1,10 @@
+{ pkgs, ... }:
 {
+  extraPackages = with pkgs; [
+    alejandra
+    stylua
+    nodePackages.prettier
+  ];
   plugins.conform-nvim = {
     enable = true;
     settings = {
@@ -12,6 +18,14 @@
           "isort"
           "ruff_format"
         ];
+
+        nix = [ "alejandra" ];
+        lua = [ "stylua" ];
+        json = [ "prettier" ];
+        jsonc = [ "prettier" ];
+        yaml = [ "prettier" ];
+        markdown = [ "prettier" ];
+
       };
       format_on_save = {
         lspFallback = true;

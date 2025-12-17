@@ -98,39 +98,58 @@
       enable = true;
     };
 
-    fzf-lua = {
+    snacks = {
       enable = true;
-      keymaps = {
-        "<C-p>" = {
-          action = "git_files";
-          options = {
-            desc = "Fzf-Lua Git Files";
-            silent = true;
-          };
-          settings = {
-            previewers = {
-              cat = { cmd = "bat"; };
-            };
-            winopts = {
-              height = 0.5;
-            };
-          };
-        };
-        "<leader>fg" = {
-          action = "live_grep";
-          options.desc = "Live grep, follow VCS";
-          settings = {
-            cmd = "ag --follow --hidden";
-          };
-        };
-        "<leader>fa" = {
-          action = "live_grep";
-          options.desc = "Live grep, ALL";
-          settings = {
-            cmd = "ag --follow -U --hidden";
-          };
-        };
-      };
     };
+
+    # fzf-lua = {
+    #   enable = true;
+    #   keymaps = {
+    #     "<C-p>" = {
+    #       action = "git_files";
+    #       options = {
+    #         desc = "Fzf-Lua Git Files";
+    #         silent = true;
+    #       };
+    #       settings = {
+    #         previewers = {
+    #           cat = { cmd = "bat"; };
+    #         };
+    #         winopts = {
+    #           height = 0.85;
+    #         };
+    #       };
+    #     };
+    #     "<C-S-p>" = {
+    #       action = "files";
+    #       options = {
+    #         desc = "Fzf-Lua All Files";
+    #         silent = true;
+    #       };
+    #       settings = {
+    #         previewers = {
+    #           cat = { cmd = "bat"; };
+    #         };
+    #         winopts = {
+    #           height = 0.85;
+    #         };
+    #       };
+    #     };
+    #     "<leader>fg" = {
+    #       action = "live_grep";
+    #       options.desc = "Live grep, follow VCS";
+    #       settings = {
+    #         cmd = "ag --follow --hidden";
+    #       };
+    #     };
+    #     "<leader>fa" = {
+    #       action = "live_grep";
+    #       options.desc = "Live grep, ALL";
+    #       settings = {
+    #         cmd = "ag --follow -U --hidden";
+    #       };
+    #     };
+    #   };
+    # };
   };
 }

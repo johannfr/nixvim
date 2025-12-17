@@ -1,6 +1,21 @@
 {
   keymaps = [
     {
+      action = "<cmd>lua Snacks.picker.smart()<CR>";
+      key = "<C-p>";
+      options.desc = "Snacks Smart File Picker";
+    }
+    {
+      action = "<cmd>lua Snacks.picker.git_branches()<CR>";
+      key = "<leader>gb";
+      options.desc = "Branches";
+    }
+    {
+      action = "<cmd>lua Snacks.picker.git_diff()<CR>";
+      key = "<leader>gd";
+      options.desc = "Diff";
+    }
+    {
       action = "<cmd>BufferLinePick<CR>";
       key = "<leader>bp";
     }
@@ -17,6 +32,12 @@
       action = "<cmd>AerialToggle!<CR>";
       key = "<leader>co";
       options.desc = "Toggle Outline";
+    }
+    {
+      key = "<leader>cf";
+      action = "<cmd>lua require('conform').format({ lsp_fallback = true})<CR>";
+      options.desc = "Format buffer";
+      options.silent = true;
     }
     {
       mode = "i";

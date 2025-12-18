@@ -17,7 +17,7 @@
   extraPackages = with pkgs; [
     # C/C++ tools
     gcc
-    #clang-tools # clangd, clang-format, clang-tidy
+    clang-tools # clang-format, Conform doesn't bring it in on its own.
 
     # Python tools
     black

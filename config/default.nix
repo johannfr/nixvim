@@ -1,7 +1,10 @@
-{pkgs, lib, ...}:
 {
+  pkgs,
+  lib,
+  ...
+}: {
   # Import all your configuration modules here
-  imports = [ 
+  imports = [
     ./settings.nix
     ./keymaps.nix
     ./plugins/ui.nix
@@ -13,6 +16,7 @@
 
   extraPackages = with pkgs; [
     # C/C++ tools
+    clang
     clang-tools # clangd, clang-format, clang-tidy
 
     # Python tools
@@ -37,5 +41,4 @@
   # extraConfigLua = ''
   #   require('bracketpair').init()
   # '';
-
 }

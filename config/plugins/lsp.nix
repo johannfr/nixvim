@@ -14,17 +14,8 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      clangd = {
-        enable = true;
-        cmd = [
-          "clangd"
-          "--offset-encoding=utf-16"
-          "--background-index"
-          "--query-driver=**"
-          # "--query-driver=${pkgs.stdenv.cc}/bin/cc,${pkgs.stdenv.cc}/bin/c++,${pkgs.stdenv.cc}/bin/g++,${pkgs.clang}/bin/clang++,${pkgs.clang}/bin/clang"
-        ];
-      };
-      # ccls.enable = true;
+      clangd.enable = false;
+      ccls.enable = true;
       pylsp.enable = true;
       ruff.enable = true;
       # pylyzer.enable = true;

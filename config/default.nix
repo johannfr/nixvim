@@ -16,12 +16,12 @@
 
   extraPackages = with pkgs; [
     # C/C++ tools
-    clang
-    clang-tools # clangd, clang-format, clang-tidy
+    #gcc
+    #clang-tools # clangd, clang-format, clang-tidy
 
     # Python tools
-    black
-    isort
+    #black
+    #isort
     libgit2
 
     # Other tools

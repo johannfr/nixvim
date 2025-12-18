@@ -1,23 +1,30 @@
-{ pkgs, ... }:
-{
-
+{pkgs, ...}: {
   plugins.aerial = {
     enable = true;
     settings = {
-      backends = [ "lsp" "treesitter" ];
+      backends = ["lsp" "treesitter"];
       layout = {
         max_width = 0.5;
         resize_to_content = true;
         default_direction = "prefer_right";
       };
     };
-
   };
 
   plugins.lsp = {
     enable = true;
     servers = {
-      clangd.enable = true;
+      clangd = {
+        enable = true;
+        cmd = [
+          "clangd"
+          "--offset-encoding=utf-16"
+          "--background-index"
+          "--query-driver=**"
+          # "--query-driver=${pkgs.stdenv.cc}/bin/cc,${pkgs.stdenv.cc}/bin/c++,${pkgs.stdenv.cc}/bin/g++,${pkgs.clang}/bin/clang++,${pkgs.clang}/bin/clang"
+        ];
+      };
+      # ccls.enable = true;
       pylsp.enable = true;
       ruff.enable = true;
       # pylyzer.enable = true;
@@ -36,39 +43,39 @@
       # };
     };
     keymaps = {
-        silent = true;
+      silent = true;
 
-        diagnostic = {
-          "<leader>do" = "open_float";
-          "[d" = "goto_prev";
-          "]d" = "goto_next";
+      diagnostic = {
+        "<leader>do" = "open_float";
+        "[d" = "goto_prev";
+        "]d" = "goto_next";
+      };
+
+      lspBuf = {
+        "<leader>ci" = {
+          action = "implementation";
+          desc = "Implementation";
         };
-
-        lspBuf = {
-          "<leader>ci" = {
-            action = "implementation";
-            desc = "Implementation";
-          };
-          "<leader>cD" = {
-            action = "references";
-            desc = "References";
-          };
-          "<leader>cd" = {
-            action = "definition";
-            desc = "Definition";
-          };
-          "<leader>ct" = {
-            action = "type_definition";
-            desc = "Type definition";
-          };
-          "K" = "hover";
-          "<leader>ca" = "code_action";
-          "<leader>cr" = {
-            action = "rename";
-            desc = "Rename";
-          };
+        "<leader>cD" = {
+          action = "references";
+          desc = "References";
+        };
+        "<leader>cd" = {
+          action = "definition";
+          desc = "Definition";
+        };
+        "<leader>ct" = {
+          action = "type_definition";
+          desc = "Type definition";
+        };
+        "K" = "hover";
+        "<leader>ca" = "code_action";
+        "<leader>cr" = {
+          action = "rename";
+          desc = "Rename";
         };
       };
+    };
   };
 
   plugins.treesitter = {
@@ -96,6 +103,4 @@
       gitignore
     ];
   };
-
-
 }

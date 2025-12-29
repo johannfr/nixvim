@@ -15,7 +15,31 @@
     enable = true;
     servers = {
       clangd.enable = false;
-      ccls.enable = true;
+      ccls = {
+        enable = true;
+        onAttach.function = ''
+          local function switch_source_header()
+            local params = { uri = vim.uri_from_bufnr(0) }
+            vim.lsp.buf_request(0, 'textDocument/switchSourceHeader', params, function(err, result)
+              if err then
+                vim.notify("ccls: " .. err.message, vim.log.levels.ERROR)
+                return
+              end
+              if not result then
+                vim.notify("ccls: No corresponding file found", vim.log.levels.WARN)
+                return
+              end
+              vim.api.nvim_command('edit ' .. vim.uri_to_fname(result))
+            end)
+          end
+
+          -- Register the keymap (e.g., <leader>ch)
+          vim.keymap.set('n', '<leader>ch', switch_source_header, {
+            buffer = bufnr,
+            desc = "CCLSSwitchSourceHeader"
+          })
+        '';
+      };
       pylsp.enable = true;
       ruff.enable = true;
       # pylyzer.enable = true;

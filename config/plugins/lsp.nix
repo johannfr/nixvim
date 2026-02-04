@@ -118,4 +118,8 @@
       gitignore
     ];
   };
+
+  plugins.treesitter-context = {
+    enable = true;
+  };
 }

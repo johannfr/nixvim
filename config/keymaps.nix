@@ -1,6 +1,11 @@
 {
   keymaps = [
     {
+      action = "<cmd>ClangdSwitchSourceHeader<CR>";
+      key = "<leader>ch";
+      options.desc = "Switch between source/header";
+    }
+    {
       action = "<cmd>lua Snacks.picker.smart()<CR>";
       key = "<C-p>";
       options.desc = "Snacks Smart File Picker";

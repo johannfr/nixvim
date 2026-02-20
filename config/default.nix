@@ -25,6 +25,7 @@
     libgit2
 
     # Other tools
+    ripgrep
     wl-clipboard
   ];
 

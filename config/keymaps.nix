@@ -11,6 +11,11 @@
       options.desc = "Snacks Smart File Picker";
     }
     {
+      action = "<cmd>lua Snacks.picker.grep()<CR>";
+      key = "<leader>fg";
+      options.desc = "Grep";
+    }
+    {
       action = "<cmd>lua Snacks.picker.git_branches()<CR>";
       key = "<leader>gb";
       options.desc = "Branches";

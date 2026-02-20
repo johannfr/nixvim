@@ -26,6 +26,26 @@
       options.desc = "Diff";
     }
     {
+      action = "<cmd>lua Snacks.picker.lsp_implementations()<CR>";
+      key = "<leader>ci";
+      options.desc = "LSP Implementations";
+    }
+    {
+      action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
+      key = "<leader>cD";
+      options.desc = "LSP References";
+    }
+    {
+      action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
+      key = "<leader>cd";
+      options.desc = "LSP Definitions";
+    }
+    {
+      action = "<cmd>lua Snacks.picker.lsp_type_definitions()<CR>";
+      key = "<leader>ct";
+      options.desc = "LSP Type Definitions";
+    }
+    {
       action = "<cmd>BufferLinePick<CR>";
       key = "<leader>bp";
     }

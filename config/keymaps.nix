@@ -16,6 +16,16 @@
       options.desc = "Grep";
     }
     {
+      action = "<cmd>lua Snacks.picker.lsp_symbols()<CR>";
+      key = "<leader>fs";
+      options.desc = "LSP Symbols";
+    }
+    {
+      action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
+      key = "<leader>fS";
+      options.desc = "LSP Workspace Symbols";
+    }
+    {
       action = "<cmd>lua Snacks.picker.git_branches()<CR>";
       key = "<leader>gb";
       options.desc = "Branches";

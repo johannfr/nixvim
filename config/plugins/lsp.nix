@@ -17,6 +17,23 @@
       clangd = {
         enable = true;
       };
+
+      basedpyright = {
+        enable = true;
+        settings = {
+          basedpyright = {
+            analysis = {
+              diagnosticSeverityOverrides = {
+                reportUndefinedVariable = "none";
+              };
+              typeCheckingMode = "basic"; # "standard" or "all" can be very aggressive
+              autoSearchPaths = true;
+              useLibraryCodeForTypes = true;
+            };
+          };
+        };
+      };
+
       pylsp.enable = true;
       ruff.enable = true;
     };

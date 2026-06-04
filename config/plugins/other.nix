@@ -7,23 +7,6 @@
     enable = true;
   };
 
-  plugins.copilot-lua = {
-    enable = true;
-    settings = {
-      panel = {
-        enable = false;
-      };
-
-      suggestion = {
-        enable = false;
-      };
-    };
-  };
-
-  plugins.copilot-chat = {
-    enable = true;
-  };
-
   plugins.mini = {
     enable = true;
     modules = {
@@ -37,7 +20,6 @@
           line_right = "<M-Right>";
           line_down = "<M-Down>";
           line_up = "<M-Up>";
-
         };
       };
     };
